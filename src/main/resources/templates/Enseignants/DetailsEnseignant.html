@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Details Enseignant</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{CSS/DetailsEnseignant.css}">
+
+<body>
+<h1>Details de l'enseignant</h1>
+<table>
+
+<tr>
+<th class="th">Id</th>
+<th class="ah">Numero Enseignant</th>
+<th class="dh">Nom</th>
+<th class="gh">Prenom</th>
+<th class="fh">Date De Naissance</th>
+<th class="vh">Sexe</th>
+<th class="nh">Grade</th>
+<th class="bh">Date d'Embauche</th>
+</tr>
+<tr>
+<td th:text="${enseignantsBusisness.Id}"></td>
+<td th:text="${enseignantsBusisness.NumeroEnseignant}"></td>
+<td th:text="${enseignantsBusisness.Nom}"></td>
+<td th:text="${enseignantsBusisness.Prenom}"></td>
+<td th:text="${enseignantsBusisness.DateDeNaissance}"></td>
+<td th:text="${enseignantsBusisness.Sexe}"></td>
+<td th:text="${enseignantsBusisness.Grade}"></td>
+<td th:text="${enseignantsBusisness.DatedEmbauche}"></td>
+</tr>
+
+
+
+</table>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<a  th:href="@{supprimerEnseignant(id=${enseignantsBusisness.Id})}" >Supprimer Enseignant</a>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<a  th:href="@{ModifierEnseignant(id=${enseignantsBusisness.Id})}" >Modifier Enseignant</a>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+Id :<span th:text ="${enseignantsBusisness.Id}"></span><br/>
+Numero Enseignant :<span th:text ="${enseignantsBusisness.NumeroEnseignant}"></span><br/>
+Nom :<span th:text ="${enseignantsBusisness.Nom}"></span><br/>
+Prenom :<span th:text ="${enseignantsBusisness.Prenom}"></span><br/>
+Date De Naissance :<span th:text ="${enseignantsBusisness.DateDeNaissance}"></span><br/>
+Sexe :<span th:text ="${enseignantsBusisness.Sexe}"></span><br/>
+Grade :<span th:text ="${enseignantsBusisness.Grade}"></span><br/>
+Date d'Embauche :<span th:text ="${enseignantsBusisness.DatedEmbauche}"></span><br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a th:href="@{/Enseignants}" >Acceuil ENSEIGNANTS</a>
+
+</body>
+</html>

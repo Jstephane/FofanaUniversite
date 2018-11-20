@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Afficher Formulaire</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+
+	<div class="mx-auto w-50 p-3 bg-primary">
+		<form th:action="@{AjouterEtudiant}" method="POST"	th:object=${Etudiants}>
+		
+             <h1>Remplir Fiche Etudiant</h1>		
+			<div class="form-group">
+		    <input type="hidden" class="form-control"
+					id="id" placeholder="id" th:field="*{Id}">
+			</div>
+			<div class="form-group">
+				<label for="NumeroEtudiants">Numero Etudiants</label> <input
+					type="text" class="form-control" id="numeroEtudiants"
+					placeholder="Numero Etudiants" th:field="*{numeroEtudiants}">
+			</div>
+			<div class="form-group">
+				<label for="nom">Nom</label> <input type="text" class="form-control"
+					id="nom" placeholder="nom" th:field="*{nom}">
+			</div>
+			<div class="form-group">
+				<label for="prenom">Prenom</label> <input type="text"
+					class="form-control" id="prenom" placeholder="prenom"
+					th:field="*{prenom}">
+			</div>
+			<div class="form-group">
+				<label for="DateDeNaissance">Date de Naissance</label> <input
+					type="text" class="form-control" id="dateNaissance"
+					placeholder="date naissance" th:field="*{dateDeNaissance}">
+			</div>
+			<div class="form-group">
+				<label for="sexe">Sexe</label> <input type="text"
+					class="form-control" id="sexe" placeholder="sexe"
+					th:field="*{sexe}">
+			</div>
+			
+			<input class="btn btn-danger" type="submit" value="Valider"
+				id="submit" />
+		</form>
+	</div>
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<a th:href="@{/Etudiants}" >Acceuil Etudiants</a>
+
+
+
+</body>
+</html>

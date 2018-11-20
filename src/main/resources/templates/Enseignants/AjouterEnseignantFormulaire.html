@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Afficher Formulaire</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+
+	<div class="mx-auto w-50 p-3 bg-primary">
+		<form th:action="@{AjouterEnseignant}" method="POST"	th:object=${Enseignants}>
+		
+             <h1>Remplir Fiche Enseignant</h1>		
+			<div class="form-group">
+		    <input type="hidden" class="form-control"
+					id="id" placeholder="id" th:field="*{Id}">
+			</div>
+			<div class="form-group">
+				<label for="NumeroEnseignant">Numero Enseignant</label> <input
+					type="text" class="form-control" id="numeroEnseignant"
+					placeholder="numero enseignant" th:field="*{NumeroEnseignant}">
+			</div>
+			<div class="form-group">
+				<label for="Nom">Nom</label> <input type="text" class="form-control"
+					id="nom" placeholder="nom" th:field="*{Nom}">
+			</div>
+			<div class="form-group">
+				<label for="Prenom">Prenom</label> <input type="text"
+					class="form-control" id="prenom" placeholder="prenom"
+					th:field="*{Prenom}">
+			</div>
+			<div class="form-group">
+				<label for="DateDeNaissance">Date de Naissance</label> <input
+					type="text" class="form-control" id="dateNaissance"
+					placeholder="date naissance" th:field="*{DateDeNaissance}">
+			</div>
+			<div class="form-group">
+				<label for="Sexe">Sexe</label> <input type="text"
+					class="form-control" id="sexe" placeholder="sexe"
+					th:field="*{Sexe}">
+			</div>
+			<div class="form-group">
+				<label for="Grade">Grade</label> <input type="text"
+					class="form-control" id="grade" placeholder="grade"
+					th:field="*{Grade}">
+			</div>
+			<div class="form-group">
+				<label for="DatedEmbauche">Date d'Embauche</label> <input type="text"
+					class="form-control" id="dateEmbauche" placeholder="date embauche"
+					th:field="*{DatedEmbauche}">
+			</div>
+
+			<input class="btn btn-danger" type="submit" value="Valider"
+				id="submit" />
+		</form>
+	</div>
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<a th:href="@{/Enseignants}" >Acceuil ENSEIGNANTS</a>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Liste des Etudiants </title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{CSS/Enseignant.css}">
+
+<body>
+
+<table>
+
+<tr>
+<th class="th">Id</th>
+<th class="ah">Numero Etudiant</th>
+<th class="dh">Nom</th>
+<th class="gh">Prenom</th>
+<th class="fh">Date De Naissance</th>
+<th class="vh">Sexe</th>
+
+
+</tr>
+
+<tr th:each=" e :${Etudiants}">
+<td th:text="${e.Id}"></td>
+<td th:text="${e.numeroEtudiants}"></td>
+<td th:text="${e.nom}"></td>
+<td th:text="${e.prenom}"></td>
+<td th:text="${e.dateDeNaissance}"></td>
+<td th:text="${e.sexe}"></td>
+<td><a th:href="@{Etudiant(id=${e.Id})}" >Details</a></td>
+
+
+
+</tr>
+
+</table>
+</br>
+</br>
+<a th:href="@{/AjouterEtudiantFormulaire}" >Ajouter Etudiant</a>
+</br>
+</br>
+
+
+
+</body>
+</html>

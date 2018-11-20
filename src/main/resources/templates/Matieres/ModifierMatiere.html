@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modifier La Matière</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Afficher Formulaire</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+
+	<div class="mx-auto w-50 p-3 bg-red">
+		<form th:action="@{ModifierMatieres}" method="POST"	th:object=${Matieres}>
+		
+             <h1>Modifier La Matière</h1>		
+			<div class="form-group">
+		    <input type="hidden" class="form-control"
+					id="id" placeholder="id" th:field="*{Id}">
+			</div>
+			<div class="form-group">
+				<label for="NumeroMatiere">Numero Matiere</label> <input
+					type="text" class="form-control" id="NumeroMatiere"
+					placeholder="Numero Matiere" th:field="*{NumeroMatiere}">
+			</div>
+			<div class="form-group">
+				<label for="Nom">Nom</label> <input type="text" class="form-control"
+					id="nom" placeholder="Nom" th:field="*{Nom}">
+			</div>
+			<div class="form-group">
+				<label for="Coefficient">Coefficient</label> <input type="text"
+					class="form-control" id="Coefficient" placeholder="Coefficient"
+					th:field="*{Coefficient}">
+			</div>
+			<div class="form-group">
+				<label for="DateDeDebut">Date De Debut</label> <input
+					type="text" class="form-control" id="DateDeDebut"
+					placeholder="Date De Debut" th:field="*{DateDeDebut}">
+			</div>
+			<div class="form-group">
+				<label for="DateDeFin">Date De Fin</label> <input type="text"
+					class="form-control" id="DateDeFin" placeholder="DateDeFin"
+					th:field="*{DateDeFin}">
+			</div>
+			
+			<div class="form-group">
+				<label for="enseignant">Enseignant</label> <input type="text"
+					class="form-control" id="enseignant" placeholder="Enseignant"
+					th:field="*{enseignant}">
+			</div>
+			
+	
+			<input class="btn btn-danger" type="submit" value="Valider"
+				id="submit" />
+		</form>
+	</div>
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<a th:href="@{/Matieres}" >Acceuil Matière</a>
+
+
+
+</body>
+</html>
+
+
+
+</body>
+</html>

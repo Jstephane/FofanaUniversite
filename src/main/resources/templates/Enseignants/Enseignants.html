@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Enseignants </title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{CSS/Enseignant.css}">
+
+<body>
+
+<table>
+
+<tr>
+<th class="th">Id</th>
+<th class="ah">NumeroEnseignant</th>
+<th class="dh">Nom</th>
+<th class="gh">Prenom</th>
+<th class="fh">Date De Naissance</th>
+<th class="vh">Sexe</th>
+<th class="nh">Grade</th>
+<th class="bh">Date d'Embauche</th>
+
+</tr>
+
+<tr th:each=" e :${Enseignants}">
+<td th:text="${e.Id}"></td>
+<td th:text="${e.NumeroEnseignant}"></td>
+<td th:text="${e.Nom}"></td>
+<td th:text="${e.Prenom}"></td>
+<td th:text="${e.DateDeNaissance}"></td>
+<td th:text="${e.Sexe}"></td>
+<td th:text="${e.Grade}"></td>
+<td th:text="${e.DatedEmbauche}"></td>
+<td><a th:href="@{Enseignant(id=${e.Id})}" >Details</a></td>
+
+
+
+</tr>
+
+</table>
+</br>
+</br>
+<a th:href="@{/AjouterEnseignantFormulaire}" >Ajouter Enseignant</a>
+</br>
+</br>
+
+<a th:href="@{/Matieres}" >Acceuil MATIERES</a>
+
+</body>
+</html>

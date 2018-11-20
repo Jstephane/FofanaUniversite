@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Details Etudiants</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{CSS/DetailsEnseignant.css}">
+
+<body>
+<h1>Details De La Matière</h1>
+<table>
+
+<tr>
+<th class="th">Id</th>
+<th class="ah">Numero Matière</th>
+<th class="dh">Nom</th>
+<th class="gh">Coefficient</th>
+<th class="fh">Date du Debut</th>
+<th class="vh">Date de Fin</th>
+
+</tr>
+<tr>
+<td th:text="${matieresBusiness.Id}"></td>
+<td th:text="${matieresBusiness.NumeroMatiere}"></td>
+<td th:text="${matieresBusiness.Nom}"></td>
+<td th:text="${matieresBusiness.Coefficient}"></td>
+<td th:text="${matieresBusiness.DateDeDebut}"></td>
+<td th:text="${matieresBusiness.DateDeFin}"></td>
+</tr>
+
+
+
+</table>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<a  th:href="@{SupprimerMatiere(id=${matieresBusiness.Id})}" >Supprimer Matiere</a>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<a  th:href="@{ModifierMatieres(id=${matieresBusiness.Id})}" >Modifier Matiere</a>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+Id :<span th:text ="${matieresBusiness.Id}"></span><br/>
+Numero De La Matière :<span th:text ="${matieresBusiness.NumeroMatiere}"></span><br/>
+Nom :<span th:text ="${matieresBusiness.Nom}"></span><br/>
+Coefficient :<span th:text ="${matieresBusiness.Coefficient}"></span><br/>
+Date De Debut :<span th:text ="${matieresBusiness.DateDeDebut}"></span><br/>
+Date De Fin :<span th:text ="${matieresBusiness.DateDeFin}"></span><br/>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a th:href="@{/Matieres}" >Acceuil Matières</a>
+
+</body>
+</html>

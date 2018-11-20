@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+
+
+table, th, td{
+        border: 2px black solid;
+        border-collapse: collapse;
+    }
+    
+.th{ background-color : red;
+
+}
+ 
+ .ah{background-color : blue;
+
+}
+
+ .dh{background-color : green;
+
+}
+
+
+ .gh{background-color : yellow;
+
+}
+
+ .fh{background-color : violet;
+
+}
+
+ .vh{background-color : grey;
+
+}
+
+ .nh{background-color : brown;
+
+}
+
+ .bh{background-color : orange;
+
+}
+
+ }   
