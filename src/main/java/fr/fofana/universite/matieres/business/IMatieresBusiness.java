@@ -2,6 +2,10 @@ package fr.fofana.universite.matieres.business;
 
 import java.util.List;
 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import fr.fofana.universite.enseignants.domain.Enseignants;
 import fr.fofana.universite.matieres.domain.Matieres;
 
@@ -24,5 +28,7 @@ public interface IMatieresBusiness {
 	public List<Enseignants> getEnseignant();
 
 	public Enseignants getEnseignantById(Integer idEnseignant);
+
+	public String ModifierMatieres(Model model, @ModelAttribute Matieres Matieres, @RequestParam Integer IdEnseignant);
 
 }

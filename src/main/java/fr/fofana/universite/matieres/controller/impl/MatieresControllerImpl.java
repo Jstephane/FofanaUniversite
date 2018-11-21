@@ -69,6 +69,9 @@ public class MatieresControllerImpl implements IMatieresController {
 	@GetMapping("/ModifierMatieres")
 	public String ModifierMatieres(Model model, @RequestParam Integer id) {
 
+		List<Enseignants> liste = matieresBusiness.getEnseignant();
+
+		model.addAttribute("enseignant", liste);
 		Matieres m = matieresBusiness.getMatiereById(id);
 
 		model.addAttribute("Matieres", m);
@@ -79,7 +82,10 @@ public class MatieresControllerImpl implements IMatieresController {
 
 	@Override
 	@PostMapping("/ModifierMatieres")
-	public String ModifierMatieres(Model model, @ModelAttribute Matieres Matieres) {
+	public String ModifierMatieres(Model model, @ModelAttribute Matieres Matieres, @RequestParam Integer IdEnseignant) {
+
+		Enseignants enseignant = matieresBusiness.getEnseignantById(IdEnseignant);
+		Matieres.setEnseignant(enseignant);
 		matieresBusiness.SaveMatieres(Matieres);
 		return "redirect:/Matieres";
 
@@ -91,6 +97,12 @@ public class MatieresControllerImpl implements IMatieresController {
 
 		model.addAttribute("matieresBusiness", matieresBusiness.getMatiereById(id));
 		return "Matieres/DetailsMatiere";
+	}
+
+	@Override
+	public String ModifierMatieres(Model model, Matieres Matieres) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

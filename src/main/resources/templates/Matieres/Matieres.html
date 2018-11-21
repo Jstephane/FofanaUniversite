@@ -16,8 +16,9 @@
 <th class="gh">Nom</th>
 <th class="fh">Coefficient</th>
 <th class="vh">Date du Debut</th>
-<th class="nh">Date de Fin</th>
-<th class="nh">Enseignant</th>
+<th class="uh">Date de Fin</th>
+<th class="ah">Nom et Prénom de l'Enseignant</th>
+
 
 
 </tr>
@@ -30,7 +31,8 @@
 <td th:text="${m.Coefficient}"></td>
 <td th:text="${m.DateDeDebut}"></td>
 <td th:text="${m.DateDeFin}"></td>
-<td th:text="${m.enseignant.Nom}"></td>
+<td th:text="${m.enseignant.Nom} + ' ' + ${m.enseignant.Prenom}"></td>
+
 <td><a th:href="@{DetailsMatiere(id=${m.id})}" >Details</a></td>
 
 

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import fr.fofana.universite.enseignants.business.IEnseignantsBusisness;
 import fr.fofana.universite.enseignants.domain.Enseignants;
@@ -83,6 +84,12 @@ public class MatieresBusinessImpl implements IMatieresBusiness {
 	public Enseignants getEnseignantById(Integer idEnseignant) {
 		Enseignants enseignant = enseignantBusiness.getEnseignantById(idEnseignant);
 		return enseignant;
+	}
+
+	@Override
+	public String ModifierMatieres(Model model, Matieres Matieres, Integer IdEnseignant) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
