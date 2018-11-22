@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 
-table, th, td{
+table, th, td , tr{
         border: 2px black solid;
         border-collapse: collapse;
     }

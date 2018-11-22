@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Notes </title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{CSS/Enseignant.css}">
+
+<body>
+
+<table>
+
+<tr>
+
+<th class="gh">Notes</th>
+<th class="gh">Nom Etudiant</th>
+<th class="gh">Matiere</th>
+
+
+
+</tr>
+
+<tr th:each=" n :${Notes}">
+<td th:text="${n.note}"></td>
+<td th:text="${n.etudiant.nom} +'  ' + ${n.etudiant.prenom}"></td>
+<td th:text="${n.matiere.nom}"></td>
+
+
+
+</tr>
+
+</table>
+</br>
+</br>
+
+</br>
+</br>
+
+<a th:href="@{/Enseignants}" >Acceuil ENSEIGNANTS</a>
+</br>
+</br>
+<a th:href="@{/Matieres}" >Acceuil MATIERES</a>
+</br>
+</br>
+
+<a th:href="@{/Etudiants}" >Acceuil ETUDIANTS</a>
+
+</br>
+</br>
+<a th:href="@{/Notes}" >Acceuil NOTES</a>
+
+
+
+</body>
+</html>

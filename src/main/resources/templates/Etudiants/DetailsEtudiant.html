@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Details Etudiants</title>
 </head>
-<link rel="stylesheet" type="text/css" th:href="@{CSS/DetailsEnseignant.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{CSS/DetailsEnseignant.css}">
 
 <body>
-<h1>Details de l'etudiant</h1>
-<table>
+	<h1>Details de l'etudiant</h1>
+	<table>
 
+		<tr>
+			<th class="th">Id</th>
+			<th class="ah">Numero Etudiant</th>
+			<th class="dh">Nom</th>
+			<th class="gh">Prenom</th>
+			<th class="fh">Date De Naissance</th>
+			<th class="vh">Sexe</th>
+
+		</tr>
+		<tr>
+			<td th:text="${etudiantsBusisness.id}"></td>
+			<td th:text="${etudiantsBusisness.numeroEtudiants}"></td>
+			<td th:text="${etudiantsBusisness.nom}"></td>
+			<td th:text="${etudiantsBusisness.prenom}"></td>
+			<td th:text="${etudiantsBusisness.dateDeNaissance}"></td>
+			<td th:text="${etudiantsBusisness.sexe}"></td>
+
+		</tr>
+
+
+
+	</table>
+	<br />
+	<br />
+	<table>
+	
 <tr>
-<th class="th">Id</th>
-<th class="ah">Numero Etudiant</th>
-<th class="dh">Nom</th>
-<th class="gh">Prenom</th>
-<th class="fh">Date De Naissance</th>
-<th class="vh">Sexe</th>
-
-</tr>
-<tr>
-<td th:text="${etudiantsBusisness.id}"></td>
-<td th:text="${etudiantsBusisness.numeroEtudiants}"></td>
-<td th:text="${etudiantsBusisness.nom}"></td>
-<td th:text="${etudiantsBusisness.prenom}"></td>
-<td th:text="${etudiantsBusisness.dateDeNaissance}"></td>
-<td th:text="${etudiantsBusisness.sexe}"></td>
-</tr>
+			<th class="th">Matieres</th>
+			<th class="ah">Note de l'Etudiant</th>
+			<th class="dh">Nom de L'Enseignant</th>
+			</tr>
+		<tr th:each=" n : ${etudiantsBusisness.Notes}">
+			<td th:text="${n.matiere.Nom}"></td>
+			<td th:text="${n.Note}"></td>
+			<td th:text="${n.matiere.enseignant.Nom + '    ' + n.matiere.enseignant.Prenom}"></td>
+		</tr>
 
 
+	</table>
 
-</table>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+	<a th:href="@{SupprimerEtudiant(id=${etudiantsBusisness.Id})}">Supprimer
+		Etudiants</a>
 
-<a  th:href="@{SupprimerEtudiant(id=${etudiantsBusisness.Id})}" >Supprimer Etudiants</a>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+	<a th:href="@{ModifierEtudiant(id=${etudiantsBusisness.Id})}">Modifier
+		Etudiants</a>
 
-<a  th:href="@{ModifierEtudiant(id=${etudiantsBusisness.Id})}" >Modifier Etudiants</a>
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-Id :<span th:text ="${etudiantsBusisness.Id}"></span><br/>
-Numero Enseignant :<span th:text ="${etudiantsBusisness.NumeroEtudiants}"></span><br/>
-Nom :<span th:text ="${etudiantsBusisness.nom}"></span><br/>
-Prenom :<span th:text ="${etudiantsBusisness.prenom}"></span><br/>
-Date De Naissance :<span th:text ="${etudiantsBusisness.DateDeNaissance}"></span><br/>
-Sexe :<span th:text ="${etudiantsBusisness.sexe}"></span><br/>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br /> Id :
+	<span th:text="${etudiantsBusisness.Id}"></span>
+	<br /> Numero Enseignant :
+	<span th:text="${etudiantsBusisness.NumeroEtudiants}"></span>
+	<br /> Nom :
+	<span th:text="${etudiantsBusisness.nom}"></span>
+	<br /> Prenom :
+	<span th:text="${etudiantsBusisness.prenom}"></span>
+	<br /> Date De Naissance :
+	<span th:text="${etudiantsBusisness.DateDeNaissance}"></span>
+	<br /> Sexe :
+	<span th:text="${etudiantsBusisness.sexe}"></span>
+	<br />
 
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<a th:href="@{/Etudiants}" >Acceuil Etudiants</a>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<a th:href="@{/Etudiants}">Acceuil Etudiants</a>
 
 </body>
 </html>

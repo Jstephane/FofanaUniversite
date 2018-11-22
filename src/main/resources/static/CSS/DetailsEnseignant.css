@@ -5,3 +5,38 @@ table, th, td{
         border: 2px black solid;
         border-collapse: collapse;
     }
+    
+    .th{ background-color : red;
+
+}
+ 
+ .ah{background-color : blue;
+
+}
+
+ .dh{background-color : green;
+
+}
+
+
+ .gh{background-color : yellow;
+
+}
+
+ .fh{background-color : violet;
+
+}
+
+ .vh{background-color : grey;
+
+}
+
+ .uh{background-color : silver;
+
+}
+
+ .bh{background-color : orange;
+
+}
+
+<div style="overflow-x:auto;">
