@@ -10,13 +10,13 @@ import fr.fofana.universite.enseignants.business.IEnseignantsBusisness;
 import fr.fofana.universite.enseignants.domain.Enseignants;
 
 @Service
-public class EnseignantsBusisnessImpl implements IEnseignantsBusisness {
+public class enseignantsbusisnessImpl implements IEnseignantsBusisness {
 
 	@Autowired
 	private IEnseignantRepository EnseignantRepository;
 
 	@Override
-	public List<Enseignants> getEnseignants() {
+	public List<Enseignants> getenseignants() {
 
 		List<Enseignants> ListeEnseignant = EnseignantRepository.findAll();
 
@@ -24,19 +24,19 @@ public class EnseignantsBusisnessImpl implements IEnseignantsBusisness {
 	}
 
 	@Override
-	public Enseignants AjouterEnseignantFormulaire() {
+	public Enseignants ajouterenseignantFormulaire() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void saveEnseignants(Enseignants Enseignant) {
+	public void saveenseignants(Enseignants Enseignant) {
 		EnseignantRepository.save(Enseignant);
 
 	}
 
 	@Override
-	public Enseignants getEnseignantById(Integer id) {
+	public Enseignants getenseignantById(Integer id) {
 
 		Enseignants e = EnseignantRepository.getOne(id);
 
@@ -44,21 +44,27 @@ public class EnseignantsBusisnessImpl implements IEnseignantsBusisness {
 	}
 
 	@Override
-	public void SupprimerEnseignant(Integer id) {
+	public void supprimerenseignant(Integer id) {
 		EnseignantRepository.deleteById(id);
 
 	}
 
 	@Override
 
-	public void ModifierEnseignant(Enseignants Enseignants) {
+	public void modifierenseignant(Enseignants Enseignants) {
 
 		EnseignantRepository.save(Enseignants);
 
 	}
 
 	@Override
-	public void saveEnseignants(Integer id) {
+	public void saveenseignants(Integer id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void savenseignants(Integer id) {
 		// TODO Auto-generated method stub
 
 	}

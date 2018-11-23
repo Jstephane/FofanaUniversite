@@ -76,13 +76,13 @@ public class MatieresBusinessImpl implements IMatieresBusiness {
 	@Override
 	public List<Enseignants> getEnseignant() {
 
-		List<Enseignants> enseignant = enseignantBusiness.getEnseignants();
+		List<Enseignants> enseignant = enseignantBusiness.getenseignants();
 		return enseignant;
 	}
 
 	@Override
 	public Enseignants getEnseignantById(Integer idEnseignant) {
-		Enseignants enseignant = enseignantBusiness.getEnseignantById(idEnseignant);
+		Enseignants enseignant = enseignantBusiness.getenseignantById(idEnseignant);
 		return enseignant;
 	}
 

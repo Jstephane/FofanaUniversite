@@ -7,18 +7,22 @@ import fr.fofana.universite.enseignants.domain.Enseignants;
 
 public interface IEnseignantsController {
 
-	public String getEnseignants(Model model);
+	public String getenseignants(Model model);
 
-	public String getEnseignantById(Model model, Integer id);
+	public String getenseignantById(Model model, Integer id);
 
-	public String AjouterEnseignantFormulaire(Model model, Integer id);
+	public String ajouterenseignantFormulaire(Model model, Integer id);
 
-	public String AjouterEnseignant(Model model, Enseignants Enseignants);
+	public String ejouterenseignant(Model model, Enseignants Enseignants);
 
-	public String SupprimerEnseignant(Model model, Integer id);
+	public String supprimerenseignant(Model model, Integer id);
 
-	public String ModifierEnseignant(Model model, Integer id);
+	public String modifierenseignant(Model model, Integer id);
 
-	public String modifierEnsEnseignant(Model model, @ModelAttribute Enseignants Enseignants);
+	public String modifierensenseignant(Model model, @ModelAttribute Enseignants Enseignants);
+
+	String ajouterenseignantformulaire(Model model, Integer id);
+
+	String ajouterenseignant(Model model, Enseignants Enseignants);
 
 }
